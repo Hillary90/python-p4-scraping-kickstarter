@@ -12,6 +12,7 @@ def create_project_dict():
     html = ''
     with open('./fixtures/kickstarter.html') as file:
         html = file.read()
+
     kickstarter = BeautifulSoup(html, 'html.parser')
     projects = {}
     # Iterate through the projects
@@ -27,5 +28,7 @@ def create_project_dict():
 
     return projects
 
-projects = create_project_dict()
-print(projects)
+if __name__ == "__main__":
+    ipdb.set_trace()
+    create_project_dict()
+
